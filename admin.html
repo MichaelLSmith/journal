@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link rel="stylesheet" href="css/app.css">
+
+     <title>Journal Admin</title>
+</head>
+<body>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <!-- <a href="#!" class="brand-logo">Logo</a> -->
+                     <!-- <form class="">
+                        <div class="input-field center">
+                            <input id="search" type="search" required>
+                            <label for="search"><i class="material-icons">search</i>
+                            </label>
+                        <i class="material-icons">close</i>
+                        </div>
+                    </form> -->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#openModal">Open Modal Example</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="#createEntry">Create Entry</a></li>
+                    <li class="active"><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<div class="searchWrapper">
+    <nav>
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+</div>
+<div class="container">
+
+   <!--  <div class="parallax-container">
+      <div class="parallax"><img src="images/2013-berlin.jpg"></div> -->
+    
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio possimus, quidem excepturi quibusdam itaque repellendus fugit animi illum. Placeat inventore corrupti corporis nihil recusandae nostrum provident, ut, deserunt minima nisi!
+    </p>
+    <div>
+        <p>Journal Entries:</p>
+        <ul>
+            <li id="response"><a href="#hunting">hunting</a></li>
+            <!-- <li id ="newEntry"><a href="#createEntry">Create Entry</a></li> -->
+        </ul>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio possimus, quidem excepturi quibusdam itaque repellendus fugit animi illum. Placeat inventore corrupti corporis nihil recusandae nostrum provident, ut, deserunt minima nisi!     
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio possimus, quidem excepturi quibusdam itaque repellendus fugit animi illum. Placeat inventore corrupti corporis nihil recusandae nostrum provident, ut, deserunt minima nisi! 
+    </p>
+
+    
+
+<!-- Modals Start -->
+    <!-- Create Entry -->
+    <div id="createEntry" class="modalDialog">
+        <div>
+        <!-- Modal Divs Open -->
+            <!-- <a href="#close" title="Close" class="close">X</a> -->
+            <div class="row">
+                <form id="OldcreateEntryForm" action="#close" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <input placeholder="Entry Title" id="title" name="title" type="text" class="validate">
+                          <label for="title">Title</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                            <label for="content">Content here</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="author" name="author" type="text" class="validate">
+                            <label for="author">Author</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="tags" name="tags" type="text" class="validate">
+                            <label for="tags">Enter Tags</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="submit" value="Create Entry">
+                            <a href="#close" title="Close">Close</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <!-- Entry Form End -->
+        </div>
+    </div>
+    <!-- Entry Modal Divs End -->
+  
+<!-- Create Entry Form Modal End -->
+
+<!-- Entries Modal Template -->
+    <div id="hunting" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>Hunting</h2>
+            <p>I went hunting in Northern Ontario</p>
+        </div>
+    </div>
+
+    <div id="dummyModal" class="modalDialog">
+        Content
+    </div>
+
+
+        <!-- Modal Example -->
+            <!-- <a href="#openModal">Open Modal</a> -->
+
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Modal Box</h2>
+                    <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+                    <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+                </div>
+            </div>
+<!-- Modals End -->
+         
+<!-- End Container -->
+</div> 
+
+
+<!-- </div> -->
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

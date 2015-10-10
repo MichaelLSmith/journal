@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('.parallax').parallax();
+    $(".button-collapse").sideNav();
     
     $('#createEntry').submit(function(event){
         event.preventDefault();
@@ -17,16 +18,20 @@ $(document).ready(function(){
 // Global Variables
 
     // Create Entry variables:
+    //Variables from form:
     var title;
     var content;
     var tags;
     var author;
+    var timestamp;//automatically generated during entry creation.
+    //Variables for html generation
     var currentEntryTitle;
     var currentEntryContent;
     var currentEntryAuthor;
     var modalHtml;
-    var counter;
-    var timestamp;
+    //search-related array variables
+    
+    var searchEntriesResults = [];
 
 //Helper Functions
 
@@ -74,46 +79,28 @@ entry.prototype.addTag = function(tag){
     }
 
 
-// Model 3 (Is this the Controler? Ask John)
-// 3.1 Search all values of entries
+// Model 3 --  (Is this the Controler? Ask John)
+// 3.1 Search title, content, author
 
 Journal.prototype.searchEntries = function(searchString) {
-        var result = false;
         for (var entriesIndex = 0; entriesIndex < this.entries.length; entriesIndex++) { 
             if (
                 this.entries[entriesIndex].title.search(searchString) > -1 || 
                 this.entries[entriesIndex].content.search(searchString) > -1 ||
-                this.entries[entriesIndex].author.search(searchString) > -1 ||
-                this.entries[entriesIndex].tags.search(searchString) > -1
-                ){
-                    console.log(this.entries[entriesIndex]);
-                    result = true;
-                }
-        return = result;
+                this.entries[entriesIndex].author.search(searchString) > -1)
+                {searchEntriesResults.push(this.entries[entriesIndex])}//end if action
+        
         }//end of For
-        if (result = false){
-            console.log('Could not find any entry containing'+' '+searchString);
-        }
+        console.log(searchEntriesResults);
+        return searchEntriesResults;
     }//end searchEntries function
 
 //3.2 Search by Title
 
-Journal.prototype.searchTitle = function(searchString){
-    // var result = false;
-    var searchTitleResults = [];
-    
+Journal.prototype.searchTitle = function(searchString){    
     for(var entriesIndex = 0; entriesIndex < this.entries.length; entriesIndex++){
         if (this.entries[entriesIndex].title.search(searchString) > -1)
-
-            //Generate List of Search Results by Title
-             // generate html
-        var html = generateHtml(title);
-        // console.log(html);
-        $("#searchResults").html(html);
-
-
-            this.entries[entriesIndex].push(searchTitleResults);
-         // searchResults.push(// entriesIndex);
+        this.entries[entriesIndex].push(searchTitleResults);
         console.log(this.entries[entriesIndex]);
     }
 
@@ -133,7 +120,7 @@ Journal.prototype.getEntries = function(entryList) {
 
 //  entry Functions:
 
-//2.2.1 Search Tags
+//3.2.1 Search Tags
 
 Journal.prototype.searchTags = function(searchString) {
         for (var entriesIndex = 0; entriesIndex < this.entries.length; entriesIndex++) { 
@@ -185,6 +172,13 @@ function generateAllEntriesHtml(currentEntryTitle){
         // console.log(modalHtml);
         return modalHtml;
 }
+//Generate List of Search Results
+   //Generate List of Search Results by Title
+             // generate html
+        // var html = generateHtml(title);
+        // // console.log(html);
+        // $("#searchResults").html(html);
+
 
 //Helper Functions
 
@@ -223,14 +217,14 @@ function entryForm(frm){
 
 
    // generate html
-        var html = generateAllEntriesHtml(title);
-        // console.log(html);
-        $("#response").append(html);
-        var modalHtml = generateEntryModal(title,content,author);
-        // console.log(modalHtml);
-        $('#dummyModal').before(modalHtml);
-    // this.entries[1].timestamp = d;
-    };
+    //     var html = generateAllEntriesHtml(title);
+    //     // console.log(html);
+    //     $("#response").append(html);
+    //     var modalHtml = generateEntryModal(title,content,author);
+    //     // console.log(modalHtml);
+    //     $('#dummyModal').before(modalHtml);
+    // // this.entries[1].timestamp = d;
+    // };
 
 
 var MyJournal = new Journal();

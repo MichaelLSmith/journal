@@ -1,3 +1,44 @@
+/*Regular CSS*/
+body {
+    font-size: 100%;
+}
+
+
+.borderBackground {
+    border: 2px solid black;
+}
+
+#myCards div {
+    padding: 7px;
+}
+
+#myCards h1 {
+    font-size: 1.9em;
+    margin: 0;
+}
+
+.profilePic {
+    height: 43px;
+   /* float: left;*/
+}
+
+/*.authorProfile div {
+    display: inline;
+}*/
+
+#authorProfile h5 {
+    /*display: inline-block;*/
+    margin: 3px;
+}
+
+.authorProfile h6 {
+    /*display: inline-block;*/
+    margin: 3px;
+}
+
+
+
+
 /*Modals*/
 
 .modalDialog {
@@ -75,8 +116,3 @@
 
 .submitEntry:hover { background: #00d9ff; }
 
-/*Regular CSS*/
-
-.borderBackground {
-    border: 2px solid black;
-}

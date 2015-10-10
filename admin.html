@@ -16,9 +16,26 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li class="center">
-                        <form class="">
+                        <form>
+                            <div class="input-field center">
+                                <input id="search" type="search" required>
+                                <label for="search"><i class="material-icons">search</i>
+                                </label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="#openModal">Open Modal Example</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="#createEntry">Create Entry</a></li>
+                    <li class="active"><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <form>
                             <div class="input-field center">
                                 <input id="search" type="search" required>
                                 <label for="search"><i class="material-icons">search</i>
@@ -48,7 +65,7 @@
         </div>
     </div>
 
-    <div class="row borderBackground">
+    <!-- <div class="row">
         <div class="col s12 m6">
             <p>Journal Entries:</p>
             <ul>
@@ -62,19 +79,78 @@
                 <li>second result</li>
             </ul>
         </div>
+    </div> -->
+    
+
+
+   <div id="myCards" class="row"> 
+    
+        <div class="col s12 m6">
+            <img src="images/cityImages.jpg" class="responsive-img">           
+            <h1>Title</h1>
+            <div class="row authorProfile" id="authorProfile">
+                <div class="col s2">
+                    <img src="images/user1.jpg" class="profilePic circle">
+                </div>
+                <div class="col s10">
+                <h5>Author</h5>
+                <h6>Published: Jan 9 2015</h6>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+        </div>
+        
+        <div class="col s12 m6">
+            <img src="images/cityImages.jpg" class="responsive-img">
+            <h1>Title</h1>
+            <div class="row authorProfile" id="authorProfile">
+                <div class="col s2">
+                    <img src="images/user1.jpg" class="profilePic circle">
+                </div>
+                <div class="col s10">
+                <h5>Author</h5>
+                <h6>Published: Jan 9 2015</h6>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+        </div>
+        <div class="col s12 m6">
+            <img src="images/cityImages.jpg" class="responsive-img">
+            <h1>Title</h1>
+             <div class="row authorProfile" id="authorProfile">
+                <div class="col s2">
+                    <img src="images/user1.jpg" class="profilePic circle">
+                </div>
+                <div class="col s10">
+                <h5>Author</h5>
+                <h6>Published: Jan 9 2015</h6>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+        </div>
+        <div class="col s12 m6">
+            <img src="images/cityImages.jpg" class="responsive-img">
+            <h1>Title</h1>
+            <div class="row authorProfile" id="authorProfile">
+                <div class="col s2">
+                    <img src="images/user1.jpg" class="profilePic circle">
+                </div>
+                <div class="col s10">
+                <h5>Author</h5>
+                <h6>Published: Jan 9 2015</h6>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt soluta quae repellat, saepe voluptates necessitatibus vel voluptatem dolor quibusdam impedit eligendi, tempora autem ullam libero error dolorem sequi odio nam!</p>
+        </div>
     </div>
-    
-
-
-   <div class="row"> 
-   
-       <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-       <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-       <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
-       <div class="col s12 m6 l3"><p>s12 m6 l3</p></div></div>
-
-   
-    
 
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio possimus, quidem excepturi quibusdam itaque repellendus fugit animi illum. Placeat inventore corrupti corporis nihil recusandae nostrum provident, ut, deserunt minima nisi!     

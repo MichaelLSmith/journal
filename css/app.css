@@ -77,7 +77,6 @@
 
 /*Regular CSS*/
 
-.searchWrapper {
-    width: 15%;
-    padding-top: 15px;
+.borderBackground {
+    border: 2px solid black;
 }
